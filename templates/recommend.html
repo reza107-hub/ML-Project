@@ -75,17 +75,21 @@
 
       <div class="row mt-5 pt-5">
         
-        <div class="col-md-3 mt-5 pt-5">
-            <div class="card h-100">
-                <div class="card-body">
-                    <img class="card-img-top book-img" src="http://images.amazon.com/images/P/0449212602.01.MZZZZZZZ.jpg">
-                    <p class="mt-2">kghaicj</p>
-                    <h4 class="">nadia</h4>
-                    <h4 class="">sjch</h4>
-                    <h4 class="">jhakj</h4>
+        {% if data %}
+
+             {% for i in data %}
+                <div class="col-md-3" style="margin-top:50px">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img class="card-img-top book-img" src="{{i[2]}}">
+                            <p class="">{{i[0]}}</p>
+                            <h4 class="">{{i[1]}}</h4>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+             {% endfor %}
+
+            {% endif %}
 
       </div>
     </section>

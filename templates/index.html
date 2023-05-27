@@ -22,8 +22,7 @@
         font-size: medium;
       }
       .book-img {
-        height: 200px;
-        width: 150px;
+        height: 325px;
       }
       .text-size {
         font-size: 50px;
@@ -71,14 +70,14 @@
       </div>
       <div class="row mt-5 pt-5">
         {% for i in range(book_name|length) %}
-        <div class="col-md-3" style="margin-top:50px">
-            <div class="card">
+        <div class="col-md-3 mt-5 pt-5">
+            <div class="card h-100">
                 <div class="card-body">
-                    <img class="card-img-top" src="{{ image[i] }}">
-                    <p class="text-white">{{ book_name[i] }}</p>
-                    <h4 class="text-white">{{ author[i] }}</h4>
-                    <h4 class="text-white">Votes - {{ votes[i] }}</h4>
-                    <h4 class="text-white">Rating - {{ rating[i] }}</h4>
+                    <img class="card-img-top book-img" src="{{ image[i] }}">
+                    <p class="mt-2">{{ book_name[i] }}</p>
+                    <h4 class="">{{ author[i] }}</h4>
+                    <h4 class="">Votes - {{ votes[i] }}</h4>
+                    <h4 class="">Rating - {{ rating[i] }}</h4>
                 </div>
             </div>
         </div>

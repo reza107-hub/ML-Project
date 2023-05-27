@@ -18,5 +18,9 @@ def index():
                            )
 
 
+@app.route('/recommend')
+def recommend_ui():
+    return render_template('recommend.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

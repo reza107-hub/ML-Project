@@ -70,21 +70,19 @@
         <h1 class="text-white text-size">Top 50 Books</h1>
       </div>
       <div class="row mt-5 pt-5">
-        <div class="col-md-3">
-          <div class="card bg-black">
-            <img
-              src="http://images.amazon.com/images/P/0439136350.01.MZZZZZZZ.jpg"
-              class="card-img-top book-img"
-              alt="..."
-            />
-            <div class="card-body text-white p-0 pt-3">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Text</p>
-              <p class="card-text">Text</p>
-              <p class="card-text">Text</p>
+        {% for i in range(book_name|length) %}
+        <div class="col-md-3" style="margin-top:50px">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img-top" src="{{ image[i] }}">
+                    <p class="text-white">{{ book_name[i] }}</p>
+                    <h4 class="text-white">{{ author[i] }}</h4>
+                    <h4 class="text-white">Votes - {{ votes[i] }}</h4>
+                    <h4 class="text-white">Rating - {{ rating[i] }}</h4>
+                </div>
             </div>
-          </div>
         </div>
+    {% endfor %}
       </div>
     </section>
     <script
